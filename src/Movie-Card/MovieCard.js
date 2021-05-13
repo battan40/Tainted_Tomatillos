@@ -1,8 +1,6 @@
 import React from 'react';
 
 const MovieCard = ({ movie }) => {
-  console.log(movie);
-
   return (
     <div>
       <img src={movie.poster_path}/>
