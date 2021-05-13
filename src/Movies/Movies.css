@@ -1,0 +1,8 @@
+
+.movie-container {
+  height: fit-content;
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
