@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import { movieData } from './../movieData'
-
+import movieData from './../movieData'
+import Movies from '../Movies/Movies'
 
 class App extends Component {
   constructor() {
     super()
       this.state = {
-        movies: { movieData } 
+        movies: movieData.movies
       }
-  }
-
-  displayAllMovies() {
-    const [ newMovieData ] = movieData;
   }
 
   render() {
     return (
       <div className="App">
-      <header className="App-header">
-      <p>
-      Edit <code>src/App.js</code> and save to reload.
-      </p>
-      // <Movies movies={this.state.movies}
-      </header>
+      <Movies movieData={this.state.movies}/>
       </div>
     );
   }
