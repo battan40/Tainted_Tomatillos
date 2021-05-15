@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <article className="App">
+        <h1>Welcome To Tainted Tomatillos, Where The Ratings Are Honestly Rotten</h1>
         <Movies movieSelected={this.state.movieSelected}
         movieData={this.state.movies}
         handleClick={this.handleClick}/>
