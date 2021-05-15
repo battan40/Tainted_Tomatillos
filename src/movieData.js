@@ -6,7 +6,14 @@ const movieData = {
       "backdrop_path": "https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg",
       "title": "Money Plane",
       "average_rating": 6.666666666666667,
-      "release_date": "2020-09-29"
+      "release_date": "2020-09-29",
+      "overview": "Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!",
+      "average_rating": 6,
+      "genres": ["Drama"],
+      "budget":63000000,
+      "revenue":100853753,
+      "runtime":139,
+      "tagline": "It's a movie!"
     },
     {
       "id": 337401,
@@ -14,7 +21,14 @@ const movieData = {
       "backdrop_path": "https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg",
       "title": "Mulan",
       "average_rating": 4.909090909090909,
-      "release_date": "2020-09-04"
+      "release_date": "2020-09-04",
+      "overview": "Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!",
+      "average_rating": 6,
+      "genres": ["Drama"],
+      "budget":63000000,
+      "revenue":100853753,
+      "runtime":139,
+      "tagline": "It's a movie!"
     },
     {
       "id": 718444,
@@ -22,7 +36,14 @@ const movieData = {
       "backdrop_path": "https://image.tmdb.org/t/p/original//x4UkhIQuHIJyeeOTdcbZ3t3gBSa.jpg",
       "title": "Rogue",
       "average_rating": 5.428571428571429,
-      "release_date": "2020-08-20"
+      "release_date": "2020-08-20",
+      "overview": "Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!",
+      "average_rating": 6,
+      "genres": ["Drama"],
+      "budget":63000000,
+      "revenue":100853753,
+      "runtime":139,
+      "tagline": "It's a movie!"
     },
     {
       "id": 539885,
