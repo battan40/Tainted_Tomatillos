@@ -37,6 +37,13 @@ class App extends Component {
       .catch(error => this.setState({ error: this.handleSpecificErr(error.message) }))
   }
 
+  handleSpecificErr(err) {
+    if (err >= 500) {
+      return 'Something is wrong with our system. Please try again later!'
+    } else {
+      return 'Something went wrong! Please try again.'
+    }
+  }
 
 }
 
