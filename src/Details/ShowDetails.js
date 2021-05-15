@@ -1,7 +1,7 @@
 import React from 'react';
 import movieData from './../movieData'
+import './ShowDetails.css'
 
-//displayDetails = {this.displayDetails}
 const ShowDetails = ({ movie, handleClick }) => {
   return (
     <div className='card'>

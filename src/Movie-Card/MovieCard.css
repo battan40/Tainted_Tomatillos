@@ -1,13 +1,28 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 15rem;
+  width: 12rem;
   height: fit-content;
+  box-shadow: 10px 5px 5px red;
+  border-radius: 2%;
 
 }
 
 .movie-image {
-  width: 15rem;
+  width: 12rem;
   height: fit-content;
   margin-bottom:2%;
+  border-radius: 2%
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .card {
+    box-shadow: 10px 5px 5px red;
+  }
 }
