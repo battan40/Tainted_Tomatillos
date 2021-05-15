@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: fit-content;
+
+}
+
+.movie-image {
+  width: 15rem;
+  height: fit-content;
+  margin-bottom:2%;
+}
