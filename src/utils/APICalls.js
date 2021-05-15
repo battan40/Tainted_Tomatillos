@@ -16,7 +16,7 @@ export const fetchAllMovies = () => {
   })
 }
 
-export const fetchSingleMovie = () => {
+export const fetchSingleMovie = (id) => {
   return fetch(`${baseURL}/movies/:movie_id`)
   .then(checkForErr)
   .then(singleMovieData => {
