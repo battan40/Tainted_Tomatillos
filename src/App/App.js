@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import movieData from './../movieData'
 import Movies from '../Movies/Movies'
 import ShowDetails from '../Details/ShowDetails'
-
+import { fetchAllMovies } from '../utils/APICalls'
 
 class App extends Component {
   constructor() {
     super()
       this.state = {
-        movies: movieData.movies,
+        movies: [],
         movieSelected: false,
+        error: ''
       }
   }
 
@@ -28,9 +28,16 @@ class App extends Component {
         movieData={this.state.movies}
         handleClick={this.handleClick}/>
       </article>
-      )
-
+    )
   }
+
+  componentDidMount() {
+    fetchAllMovies()
+      .then(movieData => this.setState({ movies: movieData.movies }))
+      .catch(error => this.setState({ error: this.handleSpecificErr(error.message) }))
+  }
+
+
 }
 
 export default App;

@@ -2,9 +2,6 @@ import React from 'react';
 import './MovieCard.css'
 import { ShowDetails } from '../Details/ShowDetails'
 
-
-
-// event.target.id
 const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
   return (
