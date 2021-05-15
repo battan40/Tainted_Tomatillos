@@ -1,23 +1,33 @@
 import React from 'react';
 import MovieCard from '../Movie-Card/MovieCard';
 import './Movies.css'
+import ShowDetails from '../Details/ShowDetails'
 
-const Movies = ({ movieData }) => {
+const Movies = ({ movieData, movieSelected, handleClick }) => {
 
-  const movieDisplay = movieData.map(movie => {
+  const movieDisplay = () => {
+    if(movieSelected) {
+      const selection = movieData.find(movie => movie.id === movieSelected)
+        return <ShowDetails
+              movie={selection}
+              handleClick={handleClick}
+             />
+
+    } else {
+      return movieData.map(movie => {
       return (
-        <div>
           <MovieCard
             key={movie.id}
             movie={movie}
+            handleClick={handleClick}
           />
-        </div>
     )
   })
+}}
 
   return (
     <div className='movie-container'>
-      {movieDisplay}
+      {movieDisplay()}
     </div>
   )
   //the condition needs to render the container of the selected movie, and its specific details
