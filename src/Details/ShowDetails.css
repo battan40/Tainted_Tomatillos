@@ -4,9 +4,9 @@
   align-items: center;
   width: 25rem;
   border-radius: 2%;
-  border-color: black;
   color: #faf5f5;
   margin: 2rem;
+  padding: 0;
 }
 
 .details-image {
@@ -28,6 +28,28 @@
   animation:slidebg 3s linear infinite;
 }
 
+.movie-release {
+  font-size: small;
+}
+
+.overview {
+  margin-top: 1%;
+}
+
+.genre,
+.budget,
+.revenue,
+.runtime {
+  font-size: medium;
+  margin-top: 1%;
+}
+
+.genre {
+  margin-top: 3%;
+}
+
+
+
 @keyframes slidebg {
   to {
     background-position:20vw;
@@ -40,15 +62,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 3%;
+    -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+    box-shadow: 8px 11px 20px 5px #890A1A;
   }
   .home-button,
   .details-image {
     width: 15rem;
-  }
+}
 
-   {
-    background-color: #8a8383;
-    color: #faf5f5;
-    width: 15rem;
-  }
 }
