@@ -10,6 +10,7 @@ class App extends Component {
       this.state = {
         movies: [],
         movieSelected: false,
+        specificMovie: {},
         error: ''
       }
   }
@@ -24,8 +25,8 @@ class App extends Component {
     return (
       <article className="App">
         <h1>Welcome To Tainted Tomatillos, Where The Ratings Are Honestly Rotten</h1>
-        <Movies movieSelected={this.state.movieSelected}
-        movieData={this.state.movies}
+        <Movies movieData={this.state.movies}
+        movieSelected={this.state.movieSelected}
         handleClick={this.handleClick}/>
       </article>
     )
