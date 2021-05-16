@@ -13,6 +13,11 @@ class ShowDetails extends Component {
       }
   }
 
+  handleClick = (id) => {
+    this.setState({
+      movieSelected: id
+    })
+  }
 
   render() {
     console.log(this.state.specificMovie)
