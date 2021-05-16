@@ -38,6 +38,11 @@ class ShowDetails extends Component {
     )
   }
 
+  componentDidMount() {
+    fetchSingleMovie(this.state.movieID)
+      .then(singleMovieData => this.setState({ specificMovie: singleMovieData.movie }))
+      .catch(error => this.setState({ error: this.handleSpecificErr(error.message) }))
+  }
 
 }
 
