@@ -33,6 +33,7 @@
 
 @media screen and (max-width: 321px) {
   .card {
-    box-shadow: 10px 5px 5px red;
+    -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+    box-shadow: 8px 11px 20px 5px #890A1A;
   }
 }
