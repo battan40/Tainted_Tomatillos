@@ -4,7 +4,7 @@ import { fetchSingleMovie } from '../utils/APICalls'
 
 class ShowDetails extends Component {
   constructor({ movie }, props) {
-    super(props);
+    super();
       this.state = {
         movieID: movie.id,
         specificMovie: {},
@@ -17,7 +17,7 @@ class ShowDetails extends Component {
     const taintedRating = '⭐️';
     return (
       <div className='details-card'>
-      <button className='home-button' onClick={() => handleClick(false)}>Home Page</button>
+      <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
         <img className='details-image' src={this.state.specificMovie.poster_path}/>
         <h2 className='details-title'>{this.state.specificMovie.title}</h2>
         <h4 className='movie-release'>{this.state.specificMovie.release_date}</h4>
