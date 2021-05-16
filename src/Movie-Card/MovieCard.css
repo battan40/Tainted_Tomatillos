@@ -8,6 +8,13 @@
   border-color: black;
   color: #faf5f5;
   margin: 2rem;
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .movie-image {
