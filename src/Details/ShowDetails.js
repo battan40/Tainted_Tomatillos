@@ -4,16 +4,16 @@ import './ShowDetails.css'
 
 const ShowDetails = ({ movie, handleClick }) => {
   return (
-    <div className='card'>
-    <button onClick={() => handleClick(false)}>Home Page</button>
-      <img className='release-date' src={movie.poster_path}/>
-      <h2 className='title'>{movie.title}</h2>
+    <div className='details-card'>
+    <button className='home-button' onClick={() => handleClick(false)}>Home Page</button>
+      <img className='details-image' src={movie.poster_path}/>
+      <h2 className='details-title'>{movie.title}</h2>
       <h4 className='movie-release'>{movie.release_date}</h4>
       <h4 className='movie-rating'>{movie.average_rating}</h4>
-      <h4 className='overview'>{movie.overview}</h4>
-      <h4 className='genre'>{movie.genres}</h4>
+      <h4 className='details-overview'>{movie.overview}</h4>
+      <h4 className='details-genre'>{movie.genres}</h4>
       <h4 className='budget'>{movie.budget}</h4>
-    <h4 className='revenue'>{movie.revenue}</h4>
+      <h4 className='revenue'>{movie.revenue}</h4>
       <h4 className='runtime'>{movie.runtime}</h4>
       <h4 className='tagline'>{movie.tagline}</h4>
     </div>
