@@ -22,11 +22,11 @@ class ShowDetails extends Component {
         <h2 className='details-title'>{this.state.specificMovie.title}</h2>
         <h4 className='movie-release'>{this.state.specificMovie.release_date}</h4>
         <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(this.state.specificMovie.average_rating))}</h4>
-        <h4 className='overview'>{this.state.specificMovie.overview}</h4>
-        <h4 className='genre'>{this.state.specificMovie.genres}</h4>
-        <h4 className='budget'>{this.state.specificMovie.budget}</h4>
-        <h4 className='revenue'>{this.state.specificMovie.revenue}</h4>
-        <h4 className='runtime'>{this.state.specificMovie.runtime}</h4>
+        <p className='overview'>{this.state.specificMovie.overview}</p>
+        <h4 className='genre'>Genre: {this.state.specificMovie.genres}</h4>
+        <h4 className='budget'>Budget: {this.state.specificMovie.budget}</h4>
+        <h4 className='revenue'>Revenue: ${this.state.specificMovie.revenue}</h4>
+        <h4 className='runtime'>RunTime: {this.state.specificMovie.runtime} min</h4>
         <h4 className='tagline'>{this.state.specificMovie.tagline}</h4>
       </div>
     )
