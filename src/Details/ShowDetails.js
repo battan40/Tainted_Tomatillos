@@ -3,8 +3,8 @@ import './ShowDetails.css'
 import { fetchSingleMovie } from '../utils/APICalls'
 
 class ShowDetails extends Component {
-  constructor({ movie, handleClick }) {
-    super();
+  constructor({ movie }, props) {
+    super(props);
       this.state = {
         movieID: movie.id,
         specificMovie: {},
@@ -13,13 +13,15 @@ class ShowDetails extends Component {
       }
   }
   render() {
+    const { handleClick } = this.props;
+    const taintedRating = '⭐️';
     return (
       <div className='details-card'>
       <button className='home-button' onClick={() => handleClick(false)}>Home Page</button>
         <img className='details-image' src={this.state.specificMovie.poster_path}/>
         <h2 className='details-title'>{this.state.specificMovie.title}</h2>
         <h4 className='movie-release'>{this.state.specificMovie.release_date}</h4>
-        <h4 className='movie-rating'>{this.state.specificMovie.average_rating}</h4>
+        <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(this.state.specificMovie.average_rating))}</h4>
         <h4 className='overview'>{this.state.specificMovie.overview}</h4>
         <h4 className='genre'>{this.state.specificMovie.genres}</h4>
         <h4 className='budget'>{this.state.specificMovie.budget}</h4>
