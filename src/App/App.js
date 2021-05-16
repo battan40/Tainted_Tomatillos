@@ -10,20 +10,25 @@ class App extends Component {
       this.state = {
         movies: [],
         movieSelected: false,
-        specificMovie: {},
         error: ''
       }
   }
 
   handleClick = (id) => {
-    this.setState({
-      movieSelected: id
-    })
+    if(!this.state.movieSelected) {
+      this.setState({
+        movieSelected: id
+      })
+    } else {
+      this.setState({
+        movieSelected: false
+      })
+    }
   }
 
   render() {
     return (
-      <article className="App">
+      <article className='App'>
         <h1>Welcome To Tainted Tomatillos, Where The Ratings Are Honestly Rotten</h1>
         <Movies movieData={this.state.movies}
         movieSelected={this.state.movieSelected}

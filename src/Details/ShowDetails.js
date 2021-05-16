@@ -3,7 +3,7 @@ import './ShowDetails.css'
 import { fetchSingleMovie } from '../utils/APICalls'
 
 class ShowDetails extends Component {
-  constructor({ movie }) {
+  constructor({ movie, handleClick }) {
     super();
       this.state = {
         movieID: movie.id,
@@ -13,19 +13,12 @@ class ShowDetails extends Component {
       }
   }
 
-  handleClick = (id) => {
-    this.setState({
-      movieSelected: id
-    })
-  }
-
   render() {
-    console.log(this.state.specificMovie)
     return (
-      <div className='card'>
+      <div className='details-card'>
       <button onClick={() => this.handleClick(false)}>Home Page</button>
-        <img className='release-date' src={this.state.specificMovie.poster_path}/>
-        <h2 className='title'>{this.state.specificMovie.title}</h2>
+        <img className='details-image' src={this.state.specificMovie.poster_path}/>
+        <h2 className='details-title'>{this.state.specificMovie.title}</h2>
         <h4 className='movie-release'>{this.state.specificMovie.release_date}</h4>
         <h4 className='movie-rating'>{this.state.specificMovie.average_rating}</h4>
         <h4 className='overview'>{this.state.specificMovie.overview}</h4>
