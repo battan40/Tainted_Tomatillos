@@ -40,6 +40,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 3%;
+    -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+    box-shadow: 8px 11px 20px 5px #890A1A;
   }
   .home-button,
   .details-image {

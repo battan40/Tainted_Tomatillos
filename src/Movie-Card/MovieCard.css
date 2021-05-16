@@ -25,13 +25,7 @@
   border-radius: 2%
 }
 
-@media screen and (max-width: 375px) {
-  .card {
-    box-shadow: none;
-  }
-}
-
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 320px) {
   .card {
     -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
     box-shadow: 8px 11px 20px 5px #890A1A;

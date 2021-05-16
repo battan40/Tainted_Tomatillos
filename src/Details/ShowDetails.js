@@ -12,11 +12,10 @@ class ShowDetails extends Component {
         error: ''
       }
   }
-
   render() {
     return (
       <div className='details-card'>
-      <button onClick={() => this.handleClick(false)}>Home Page</button>
+      <button className='home-button' onClick={() => handleClick(false)}>Home Page</button>
         <img className='details-image' src={this.state.specificMovie.poster_path}/>
         <h2 className='details-title'>{this.state.specificMovie.title}</h2>
         <h4 className='movie-release'>{this.state.specificMovie.release_date}</h4>
