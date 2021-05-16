@@ -1,11 +1,21 @@
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 12rem;
-  height: fit-content;
-  box-shadow: 10px 5px 5px red;
+  -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+  box-shadow: 8px 11px 20px 5px #890A1A;
   border-radius: 2%;
+  border-color: black;
+  color: #faf5f5;
+  margin: 2rem;
+  transition: all .2s ease-in-out;
+}
 
+.card:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .movie-image {
@@ -23,6 +33,7 @@
 
 @media screen and (max-width: 321px) {
   .card {
-    box-shadow: 10px 5px 5px red;
+    -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+    box-shadow: 8px 11px 20px 5px #890A1A;
   }
 }
