@@ -17,7 +17,7 @@ export const fetchAllMovies = () => {
 }
 
 export const fetchSingleMovie = (id) => {
-  return fetch(`${baseURL}/movies/:movie_id`)
+  return fetch(`${baseURL}/movies/${id}`)
   .then(checkForErr)
   .then(singleMovieData => {
     return singleMovieData
