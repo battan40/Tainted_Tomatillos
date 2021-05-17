@@ -1,5 +1,5 @@
 import React from 'react';
-import './MovieCard.css'
+import './MovieCard.css';
 
 const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
