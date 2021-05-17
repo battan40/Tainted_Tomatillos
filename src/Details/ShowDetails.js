@@ -34,7 +34,7 @@ class ShowDetails extends Component {
           <h4 className='overview'>Movie Overview:</h4>
           <h4 className='overview'>{specificMovie.overview}</h4>
           <h4 className='genre'>Genre: {specificMovie.genres}</h4>
-          <h4 className='budget'>Budget: {specificMovie.budget}</h4>
+          <h4 className='budget'>Budget: ${specificMovie.budget}</h4>
           <h4 className='revenue'>Revenue: ${specificMovie.revenue}</h4>
           <h4 className='runtime'>RunTime: {specificMovie.runtime} min</h4>
           </>
