@@ -13,9 +13,7 @@ export const checkForErr = (response) => {
 export const fetchAllMovies = () => {
   return fetch(`${baseURL}/movies`)
   .then(checkForErr)
-  .then(movieData => {
-    return movieData
-  })
+  .then(movieData => movieData.movies.map(movie => movie))
 }
 
 export const fetchSingleMovie = (id) => {
