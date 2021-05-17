@@ -46,11 +46,11 @@ class App extends Component {
     fetchAllMovies()
       .then(movieData => {
         if(typeof movieData === 'string') {
-          this.setState({error: movieData})
+          this.setState({ error: movieData })
         } else {
-          this.setState({ movies: movieData.movies })
+          this.setState({ movies: movieData })
         }
-    })
+      })
       .catch(err => err.message)
   }
 }
