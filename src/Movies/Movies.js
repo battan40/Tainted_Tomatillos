@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from '../Movie-Card/MovieCard';
-import './Movies.css'
-import ShowDetails from '../Details/ShowDetails'
+import ShowDetails from '../Details/ShowDetails';
+import './Movies.css';
 
 const Movies = ({ movieData, movieSelected, handleClick }) => {
   const movieDisplay = () => {

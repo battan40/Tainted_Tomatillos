@@ -7,6 +7,8 @@
   color: #faf5f5;
   margin: 2rem;
   padding: 0;
+  -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+  box-shadow: 8px 11px 20px 5px #890A1A;
 }
 
 .details-image {
@@ -51,8 +53,6 @@
   margin-top: 3%;
 }
 
-
-
 @keyframes slidebg {
   to {
     background-position:20vw;
@@ -65,12 +65,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 3%;
-    -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
-    box-shadow: 8px 11px 20px 5px #890A1A;
   }
+
   .home-button,
   .details-image {
     width: 15rem;
-}
+  }
 
 }
