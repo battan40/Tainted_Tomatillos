@@ -1,8 +1,10 @@
 export const baseURL = 'https://rancid-tomatillos.herokuapp.com/api/v2';
 
 export const checkForErr = (response) => {
-  if(!response) {
-    throw new Error('Something went wrong! Please try again later.')
+  if(response.status >= 500) {
+    return 'Uhoh! Something is wrong with our system. Please try back later.'
+  } else if (!response.ok) {
+    return 'Something went wrong! Please try again later.'
   } else {
     return response.json()
   }
