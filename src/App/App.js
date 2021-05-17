@@ -46,9 +46,9 @@ class App extends Component {
 
   handleSpecificErr(err) {
     if (err >= 500) {
-      return <h1>'Something is wrong with our system. Please try again later!'</h1>
+      return 'Something is wrong with our system. Please try again later!'
     } else {
-      return <h1>'Something went wrong! Please try again.'</h1>
+      return 'Something went wrong! Please try again.'
     }
   }
 
