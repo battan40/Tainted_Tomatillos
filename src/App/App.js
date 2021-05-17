@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movies from '../Movies/Movies'
-import ShowDetails from '../Details/ShowDetails'
 import { fetchAllMovies } from '../utils/APICalls'
 
 class App extends Component {
