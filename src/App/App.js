@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.movies)
     return (
       <article className='App'>
         <h1>Tainted Tomatillos</h1>
