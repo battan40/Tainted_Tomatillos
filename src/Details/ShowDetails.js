@@ -18,6 +18,7 @@ class ShowDetails extends Component {
     const { specificMovie } = this.state;
     const taintedRating = '⭐️';
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
+    const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'This movie doesn\'t have a tagline';
     // if(this.state.movie && !this.state.error) {
       return (
         <div className='details-card'>
@@ -26,7 +27,7 @@ class ShowDetails extends Component {
            <h2 className='details-title'>{specificMovie.title}</h2>
            <h4 className='movie-release'>{accessDate}</h4>
            <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
-           <h4 className='tagline'>{`'${specificMovie.tagline}'`}</h4>
+           <h4 className='tagline'>{`'${taglineConditional}'`}</h4>
            <h4 className='overview'>Movie Overview:</h4>
            <h4 className='overview'>{specificMovie.overview}</h4>
            <h4 className='genre'>Genre: {specificMovie.genres}</h4>
