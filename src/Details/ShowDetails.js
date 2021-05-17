@@ -22,7 +22,7 @@ class ShowDetails extends Component {
     // if(this.state.movie && !this.state.error) {
       return (
         <div className='details-card'>
-         <button className='home-button' onClick={() => handleClick(false)}>Home Page</button>
+         <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
            <img className='details-image' src={specificMovie.poster_path}/>
            <h2 className='details-title'>{specificMovie.title}</h2>
            <h4 className='movie-release'>{accessDate}</h4>
