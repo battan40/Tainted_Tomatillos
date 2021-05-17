@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movies from '../Movies/Movies'
-import ShowDetails from '../Details/ShowDetails'
 import { fetchAllMovies } from '../utils/APICalls'
 
 class App extends Component {
@@ -29,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <article className='App'>
-        <h1>Tainted Tomatillos</h1>   
+        <h1>Tainted Tomatillos</h1>
         <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
         <Movies movieData={this.state.movies}
         movieSelected={this.state.movieSelected}
