@@ -23,7 +23,7 @@ class ShowDetails extends Component {
       return (
         <div className='details-card'>
          <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
-           <img className='details-image' src={specificMovie.poster_path}/>
+           <img className='details-image' src={specificMovie.poster_path} alt='movie poster'/>
            <h2 className='details-title'>{specificMovie.title}</h2>
            <h4 className='movie-release'>{accessDate}</h4>
            <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
