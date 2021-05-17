@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Movies from '../Movies/Movies';
+import { fetchAllMovies } from '../utils/APICalls';
 import './App.css';
-import Movies from '../Movies/Movies'
-import { fetchAllMovies } from '../utils/APICalls'
 
 class App extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class App extends Component {
         movies: [],
         movieSelected: false,
         error: ''
-      }
+    }
   }
 
   handleClick = (id) => {
@@ -26,31 +26,34 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.movies)
     return (
       <article className='App'>
         <h1>Tainted Tomatillos</h1>
         <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
+        {this.state.error && <h3>{this.state.error}</h3>}
+        {!this.state.error &&
+        <>
         <Movies movieData={this.state.movies}
         movieSelected={this.state.movieSelected}
         handleClick={this.handleClick}/>
+        </>
+      }
       </article>
     )
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     fetchAllMovies()
-      .then(movieData => this.setState({ movies: movieData.movies }))
-      .catch(error => this.setState({ error: this.handleSpecificErr(error.message) }))
+      .then(movieData => {
+        if(typeof movieData === 'string') {
+          this.setState({error: movieData})
+        } else {
+          this.setState({ movies: movieData.movies })
+        }
+    })
+      .catch(err => err.message)
   }
-
-  handleSpecificErr(err) {
-    if (err >= 500) {
-      return 'Something is wrong with our system. Please try again later!'
-    } else {
-      return 'Something went wrong! Please try again.'
-    }
-  }
-
 }
 
 export default App;
