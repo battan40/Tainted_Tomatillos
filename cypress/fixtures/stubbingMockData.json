@@ -39,7 +39,8 @@
 "title": "Peninsula",
 "average_rating": 7,
 "release_date": "2020-07-15"
-},
+}
+],
 "movie": {
   "id": 694919,
   "title": "Money Plane",
@@ -52,5 +53,7 @@
   "revenue": 0,
   "runtime": 82,
   "tagline": "",
-  "average_rating": 6.142857142857143,
+  "average_rating": 6.142857142857143
+}
+
 }
