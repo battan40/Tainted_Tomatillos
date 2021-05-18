@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
-import { fetchAllMovies } from '../utils/APICalls';
+import { fetchAllMovies } from '../../APICalls';
 import './App.css';
 
 class App extends Component {
