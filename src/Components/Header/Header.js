@@ -8,6 +8,7 @@ const Header = () => {
         <h1>Tainted Tomatillos</h1>
         <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
         <button>Login</button>
+        <input>Search for a Movie</input>
       </header>
     )
   }
