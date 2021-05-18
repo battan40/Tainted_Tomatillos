@@ -19,14 +19,15 @@ class ShowDetails extends Component {
     const taintedRating = '⭐️';
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
-
+    const imageAltTag = `movie poster for ${specificMovie.title}`
+     
       return (
         <div className='details-card'>
           <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
           {this.state.error && <h3>{this.state.error}</h3>}
           {!this.state.error &&
           <>
-          <img className='details-image' src={specificMovie.poster_path} alt='movie poster'/>
+          <img className='details-image' src={specificMovie.poster_path} alt={imageAltTag}/>
           <h2 className='details-title'>{specificMovie.title}</h2>
           <h4 className='movie-release'>{accessDate}</h4>
           <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
