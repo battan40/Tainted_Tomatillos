@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App/App';
+import App from './Components/App/App';
+import { baseURL, checkForErr, fetchAllMovies, fetchSingleMovie } from './APICalls';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 
 ReactDOM.render(
