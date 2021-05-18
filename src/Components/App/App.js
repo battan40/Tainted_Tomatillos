@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
 import { fetchAllMovies } from '../utils/APICalls';
 import './App.css';
@@ -28,8 +29,6 @@ class App extends Component {
   render() {
     return (
       <article className='App'>
-        <h1>Tainted Tomatillos</h1>
-        <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
         <>
