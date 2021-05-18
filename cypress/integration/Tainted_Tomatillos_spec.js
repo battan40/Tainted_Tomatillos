@@ -1,7 +1,8 @@
 describe('Show main view of Tainted Tomatillos App', () => {
 
   beforeEach(() => {
-
+    cy.fixture('stubbingMockData.json')
+    
     cy.visit('http://localhost:3000')
   })
 
