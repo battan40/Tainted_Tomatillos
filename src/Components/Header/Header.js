@@ -12,4 +12,4 @@ const Header = () => {
   )
 }
 
-export default Movies;
+export default Header;

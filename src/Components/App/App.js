@@ -32,9 +32,9 @@ class App extends Component {
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
         <>
-        <Movies movieData={this.state.movies}
-        movieSelected={this.state.movieSelected}
-        handleClick={this.handleClick}/>
+          <Movies movieData={this.state.movies}
+            movieSelected={this.state.movieSelected}
+            handleClick={this.handleClick}/>
         </>
       }
       </article>
