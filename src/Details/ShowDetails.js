@@ -19,7 +19,6 @@ class ShowDetails extends Component {
     const taintedRating = '⭐️';
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
-
       return (
         <div className='details-card'>
           <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
