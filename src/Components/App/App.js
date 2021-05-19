@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
 import { fetchAllMovies } from '../../APICalls';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -31,12 +32,19 @@ class App extends Component {
       <article className='App'>
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
-        <>
-          <Movies movieData={this.state.movies}
-            movieSelected={this.state.movieSelected}
-            handleClick={this.handleClick}/>
-        </>
-      }
+          <>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Movies
+                  movieData={this.state.movies}
+                  movieSelected={this.state.movieSelected}
+                  handleClick={this.handleClick}/>
+              }}
+            />
+          </>
+        }
       </article>
     )
   }
