@@ -1,6 +1,8 @@
 import React from 'react';
 import MovieCard from '../Movie-Card/MovieCard';
 import ShowDetails from '../Details/ShowDetails';
+import { Link } from 'react-router-dom';
+
 import './Movies.css';
 
 const Movies = ({ movieData, movieSelected, handleClick }) => {
@@ -26,9 +28,9 @@ const Movies = ({ movieData, movieSelected, handleClick }) => {
   }}
 
   return (
-    <div className='movie-container'>
+    <Link to={'/'}><div className='movie-container'>
       {movieDisplay()}
-    </div>
+    </div></Link>
   )
 }
 
