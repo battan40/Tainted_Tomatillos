@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchSingleMovie } from '../../APICalls';
+import { Link } from 'react-router-dom';
 import './ShowDetails.css';
 
 class ShowDetails extends Component {
