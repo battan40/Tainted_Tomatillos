@@ -4,12 +4,10 @@ import App from './Components/App/App';
 import { baseURL, checkForErr, fetchAllMovies, fetchSingleMovie } from './APICalls';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const router = <BrowserRouter> <App /> </BrowserRouter>;
+
+ReactDOM.render(router, document.getElementById('root'));
 
 reportWebVitals();
