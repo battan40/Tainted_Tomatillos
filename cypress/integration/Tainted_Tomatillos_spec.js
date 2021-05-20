@@ -57,4 +57,23 @@ describe('Show main view of Tainted Tomatillos App', () => {
 
   });
 
-  
+  describe('500 Error handle for main page view', () => {
+    it('Displays a 500 error message when the server is down', () => {
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+        statusCode: 500,
+        delay: 100
+      })
+      cy.visit('http://localhost:3000')
+        .get('article .App').should('contain', 'Uhoh! Something is wrong with our system. Please try back later.')
+    });
+  });
+
+  Describe('Below 500 error handling message on the main page view', () => {
+    it('Displays a different message when a 404 error comes through to the user', => {
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies' {
+        statusCode: 404
+      })
+      cy.visit('http://localhost:3000')
+        .get('App').should('contain', 'Something went wrong! Please try again later.')
+    });
+  });
