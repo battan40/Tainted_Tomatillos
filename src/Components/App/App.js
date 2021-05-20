@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <article className='App'>
-      <Header />
+        <Header />
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
         <>
