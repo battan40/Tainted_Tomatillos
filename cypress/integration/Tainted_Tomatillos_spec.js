@@ -31,3 +31,12 @@ describe('Show main view of Tainted Tomatillos App', () => {
     cy.get('#694919')
       .get('img').should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg')
   });
+
+  it('Should possess an alt description for the screen reader or broken image', () => {
+      cy.get('#694919')
+        .get('img').should('have.attr', 'alt');
+    });
+
+  it('Should display a title with each movie image', () => {
+      cy.get('#337401').find('.title').should('be.visible')
+  });
