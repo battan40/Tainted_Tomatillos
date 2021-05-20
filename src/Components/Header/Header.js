@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Header.css';
 
 const Header = () => {
   return (
-    <header className='App'>
+    <nav className='Header'>
       <h1>Tainted Tomatillos</h1>
       <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
-      <button>Login</button>
-      <input>Search for a Movie</input>
-    </header>
+      <button>Search</button>
+      <input
+        placeholder="Search for a Movie"
+      />
+    </nav>
   )
 }
 
