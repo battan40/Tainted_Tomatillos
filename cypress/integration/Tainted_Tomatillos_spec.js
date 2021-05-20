@@ -62,8 +62,7 @@ describe('Show main view of Tainted Tomatillos App', () => {
     it('Displays a different message when a 404 error comes through to the user', () => {
       cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
         statusCode: 404,
-        body: 'Something went wrong! Please try again later.'
-
+        delay: 200
       })
       cy.visit('http://localhost:3000')
         .get('.error-msg').should('contain', 'Something went wrong! Please try again later.')
@@ -74,7 +73,7 @@ describe('Show main view of Tainted Tomatillos App', () => {
     it('Displays a 500 error message when the server is down', () => {
       cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
         statusCode: 500,
-
+        delay: 200
       })
       cy.visit('http://localhost:3000')
         .get('.error-msg').should('contain', 'Uhoh! Something is wrong with our system. Please try back later.')
