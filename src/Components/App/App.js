@@ -43,6 +43,14 @@ class App extends Component {
                   handleClick={this.handleClick}/>
               }}
             />
+            <Route path="/movieDetails/:id" render={({ match }) => {
+              const { id } = match.params;
+              return <ShowDetails
+                movie={id}
+                handleClick={this.handleClick}
+              />
+              }}
+            />
           </Switch>
         }
       </article>
