@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { fetchSingleMovie } from '../../APICalls';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './ShowDetails.css';
 
 class ShowDetails extends Component {
-  constructor({ movie }, props) {
-    super();
+  constructor(props) {
+    super(props);
       this.state = {
-        movieID: movie.id,
+        movieID: props.movie,
         specificMovie: {},
-        movieSelected: movie.id || false,
+        movieSelected: props.movie || false,
         error: ''
       }
   }
@@ -22,27 +22,27 @@ class ShowDetails extends Component {
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
     const imageAltTag = `movie poster for ${specificMovie.title}`
 
-      return (
-        <div className='details-card'>
-          <button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button>
-          {this.state.error && <h3>{this.state.error}</h3>}
-          {!this.state.error &&
-          <>
-          <img className='details-image' src={specificMovie.poster_path} alt={imageAltTag}/>
-          <h2 className='details-title'>{specificMovie.title}</h2>
-          <h4 className='movie-release'>{accessDate}</h4>
-          <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
-          <h4 className='tagline'>{`'${taglineConditional}'`}</h4>
-          <h4 className='overview'>Movie Overview:</h4>
-          <h4 className='overview'>{specificMovie.overview}</h4>
-          <h4 className='genre'>Genre: {specificMovie.genres}</h4>
-          <h4 className='budget'>Budget: ${specificMovie.budget}</h4>
-          <h4 className='revenue'>Revenue: ${specificMovie.revenue}</h4>
-          <h4 className='runtime'>RunTime: {specificMovie.runtime} min</h4>
-          </>
-        }
-        </div>
-      )
+        return (
+          <div className='details-card'>
+            <NavLink exact to='/'><button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button></NavLink>
+            {this.state.error && <h3>{this.state.error}</h3>}
+            {!this.state.error &&
+              <>
+                <img className='details-image' src={specificMovie.poster_path} alt={imageAltTag}/>
+                <h2 className='details-title'>{specificMovie.title}</h2>
+                <h4 className='movie-release'>{accessDate}</h4>
+                <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
+                <h4 className='tagline'>{`'${taglineConditional}'`}</h4>
+                <h4 className='overview'>Movie Overview:</h4>
+                <h4 className='overview'>{specificMovie.overview}</h4>
+                <h4 className='genre'>Genre: {specificMovie.genres}</h4>
+                <h4 className='budget'>Budget: ${specificMovie.budget}</h4>
+                <h4 className='revenue'>Revenue: ${specificMovie.revenue}</h4>
+                <h4 className='runtime'>RunTime: {specificMovie.runtime} min</h4>
+              </>
+            }
+          </div>
+        )
   }
 
   componentDidMount = () => {
@@ -51,7 +51,7 @@ class ShowDetails extends Component {
         if(typeof singleMovieData === 'string') {
           this.setState({ error: singleMovieData })
         } else {
-         this.setState({ specificMovie: singleMovieData.movie })
+          this.setState({ specificMovie: singleMovieData.movie })
         }
     })
       .catch(err => err.message)
