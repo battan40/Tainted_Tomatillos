@@ -61,13 +61,13 @@ class App extends Component {
   componentDidMount = () => {
     fetchAllMovies()
       .then(movieData => {
-        if(typeof movieData === 'string') {
-          this.setState({ error: movieData })
-        } else {
-          this.setState({ movies: movieData })
-        }
+        (typeof movieData === 'string') ?
+          this.setState({ error:
+            movieData }):
+              this.setState({ movies:
+                movieData.movies })
       })
-      .catch(err => err.message)
+      .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
   }
 }
 
