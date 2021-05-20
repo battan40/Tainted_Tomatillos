@@ -26,3 +26,8 @@ describe('Show main view of Tainted Tomatillos App', () => {
   it('Should display all movies on the main page', () => {
     cy.get('article').find('.card').should('have.length', 5)
   });
+
+  it('Should show a movie poster image with each film display', () => {
+    cy.get('#694919')
+      .get('img').should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg')
+  });
