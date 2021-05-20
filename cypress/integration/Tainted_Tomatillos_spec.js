@@ -17,8 +17,12 @@ describe('Show main view of Tainted Tomatillos App', () => {
   });
 
   it('Should display the title, subtitle, button, and input of the page upon loading', () => {
-      cy.contains('header>h1', 'Tainted Tomatillos')
-        .get('header .small-title').should('contain', 'Where')
-        .get('header').find('button').should('be.visible')
-        .get('header input[type=text]').should('be.visible')
+    cy.contains('header>h1', 'Tainted Tomatillos')
+      .get('header .small-title').should('contain', 'Where')
+      .get('header').find('button').should('be.visible')
+      .get('header input[type=text]').should('be.visible')
+  });
+
+  it('Should display all movies on the main page', () => {
+    cy.get('article').find('.card').should('have.length', 5)
   });
