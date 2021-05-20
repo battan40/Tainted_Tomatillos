@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
+import ShowDetails from '../Details/ShowDetails';
 import { fetchAllMovies } from '../../APICalls';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -28,17 +30,31 @@ class App extends Component {
 
   render() {
     return (
+      <>
       <article className='App'>
         <Header />
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
-        <>
-          <Movies movieData={this.state.movies}
-            movieSelected={this.state.movieSelected}
-            handleClick={this.handleClick}/>
-        </>
-      }
+          <Switch>
+            <Route exact path="/" render={() => {
+                return <Movies
+                  movieData={this.state.movies}
+                  movieSelected={this.state.movieSelected}
+                  handleClick={this.handleClick}/>
+              }}
+            />
+            <Route path="/movieDetails/:id" render={({ match }) => {
+              const { id } = match.params;
+              return <ShowDetails
+                movie={id}
+                handleClick={this.handleClick}
+              />
+              }}
+            />
+          </Switch>
+        }
       </article>
+      </>
     )
   }
 
