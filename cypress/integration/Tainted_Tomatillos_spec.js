@@ -33,10 +33,20 @@ describe('Show main view of Tainted Tomatillos App', () => {
   });
 
   it('Should possess an alt description for the screen reader or broken image', () => {
-      cy.get('#694919')
-        .get('img').should('have.attr', 'alt');
-    });
+    cy.get('#694919')
+      .get('img').should('have.attr', 'alt');
+  });
 
   it('Should display a title with each movie image', () => {
-      cy.get('#337401').find('.title').should('be.visible')
+    cy.get('#337401').find('.title').should('be.visible')
   });
+
+  it('Should display a rating as star emojis for each movie on the main page', () => {
+    cy.get('#337401').find('.movie-rating').contains('⭐️')
+  });
+
+  it('Every movie display should be a clickable card', () => {
+    cy.get('article').click()
+  });
+
+  
