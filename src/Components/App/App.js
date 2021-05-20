@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
+import ShowDetails from '../Details/ShowDetails';
 import { fetchAllMovies } from '../../APICalls';
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -29,23 +30,23 @@ class App extends Component {
 
   render() {
     return (
+      <>
       <article className='App'>
+        <Header />
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
-          <>
-            <Route
-              exact
-              path="/"
-              render={() => {
+          <Switch>
+            <Route exact path="/" render={() => {
                 return <Movies
                   movieData={this.state.movies}
                   movieSelected={this.state.movieSelected}
                   handleClick={this.handleClick}/>
               }}
             />
-          </>
+          </Switch>
         }
       </article>
+      </>
     )
   }
 
