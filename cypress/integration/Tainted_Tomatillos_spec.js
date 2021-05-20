@@ -49,4 +49,12 @@ describe('Show main view of Tainted Tomatillos App', () => {
     cy.get('article').click()
   });
 
+  it('Should go to a display of an individual movie, upon click of anywhere on the movie card', () => {
+    cy.get('#337401').click()
+        .url().should('include', '/337401')
+        .get('.details-card')
+    })
+
+  });
+
   
