@@ -9,7 +9,6 @@ class ShowDetails extends Component {
       this.state = {
         movieID: props.movie,
         specificMovie: {},
-        showDetails: false || this.state;
         error: ''
       }
   }
