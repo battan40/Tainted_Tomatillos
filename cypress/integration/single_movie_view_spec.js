@@ -39,12 +39,16 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.get('[data-cy=details-title]').should('contain', 'Mulan');
   });
 
-  it('Should display a title on the movie details card', () => {
+  it('Should display a movie release year on the movie details card', () => {
     cy.get('[data-cy=movie-release]').should('contain', '2020');
   });
 
-  it('Should display a title on the movie details card', () => {
-    cy.get('[data-cy=movie-rating]').contains('⭐️');
+  it('Should display a movie rating on the movie details card', () => {
+    cy.get('[data-cy=movie-rating]').should('contain', '⭐️⭐️⭐️⭐️⭐️');
+  });
+
+  it('Should display a tagline on the movie details card', () => {
+    cy.get('[data-cy=tagline]').should('contain', 'Write in and give us a tagline for this one!');
   });
 
 })
