@@ -11,6 +11,11 @@ class SearchBar extends Component {
       }
   }
 
+  handleChange = (event) => {
+    let searchValue = event.target.value;
+    this.setState({ searchInput: searchValue })
+  }
+
   render () {
     return (
       <form>
