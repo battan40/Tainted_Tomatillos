@@ -27,12 +27,16 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.get('article').find('.details-card').should('have.length', 1)
   });
 
-  it('Should show a movie poster image with each film display', () => {
+  it('Should show a movie poster image on the movie details card', () => {
     cy.get('img').should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg')
   });
 
   it('Should possess an alt description for the screen reader or broken image', () => {
     cy.get('img').should('have.attr', 'alt');
+  });
+
+  it('Should display a title on the movie details card', () => {
+    cy.get('[data-cy=details-title]').should('contain', 'Mulan')
   });
 
 })
