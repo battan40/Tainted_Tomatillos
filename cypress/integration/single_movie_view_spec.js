@@ -93,7 +93,7 @@ describe('400 error handling message on the main page view', () => {
       delay: 200
     })
     cy.visit('http://localhost:3000/movieDetails/337401')
-      .get('h3').should('contain', 'Something went wrong! Please try again later.')
+      .get('h3').should('contain', 'Something went wrong. Please try again later.')
   });
 });
 
