@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Movies.css';
 
-const Movies = ({ movieData, movieSelected, handleClick }) => {
+const Movies = ({ movieData, handleClick }) => {
   const movieDisplay = () => {
       return movieData.map(movie => {
         return (
