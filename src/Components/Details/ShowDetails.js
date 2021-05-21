@@ -32,8 +32,8 @@ class ShowDetails extends Component {
                 <h4 data-cy='movie-release' className='movie-release'>{accessDate}</h4>
                 <h4 data-cy='movie-rating' className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
                 <h4 data-cy='tagline' className='tagline'>{`'${taglineConditional}'`}</h4>
-                <h4 className='overview'>Movie Overview:</h4>
-                <h4 className='overview'>{specificMovie.overview}</h4>
+                <h4 data-cy='overview-label' className='overview'>Movie Overview:</h4>
+                <h4 data-cy='overview' className='overview'>{specificMovie.overview}</h4>
                 <h4 className='genre'>Genre: {specificMovie.genres}</h4>
                 <h4 className='budget'>Budget: ${specificMovie.budget}</h4>
                 <h4 className='revenue'>Revenue: ${specificMovie.revenue}</h4>
