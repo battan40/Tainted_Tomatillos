@@ -70,4 +70,10 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
   it('Should display a revenue on the movie details card', () => {
     cy.get('[data-cy=revenue]').should('contain', '$57000000');
   });
+
+  it('Should display a runtime on the movie details card', () => {
+    cy.get('[data-cy=runtime]').should('contain', '115 min');
+  });
+
+
 })
