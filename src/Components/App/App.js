@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
-import { fetchAllMovies } from '../../APICalls';
+import SearchBar from '../SearchBar/SearchBar';
 import { Route, Switch } from 'react-router-dom';
+import { fetchAllMovies } from '../../APICalls';
 import './App.css';
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
       <>
       <article className='App'>
         <Header />
+        <SearchBar />
         {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
