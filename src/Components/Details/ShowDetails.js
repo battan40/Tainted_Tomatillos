@@ -9,7 +9,7 @@ class ShowDetails extends Component {
       this.state = {
         movieID: props.movie,
         specificMovie: {},
-        movieSelected: props.movie || false,
+        showDetails: false || this.state;
         error: ''
       }
   }
@@ -18,6 +18,7 @@ class ShowDetails extends Component {
     const { handleClick } = this.props;
     const { specificMovie } = this.state;
     const taintedRating = '⭐️';
+    const taintedAverage = taintedRating.repeat(Math.floor(specificMovie.average_rating));
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
 
@@ -30,7 +31,7 @@ class ShowDetails extends Component {
                 <img className='details-image' src={specificMovie.poster_path} alt={`movie poster for ${specificMovie.title}`}/>
                 <h2 data-cy='details-title' className='details-title'>{specificMovie.title}</h2>
                 <h4 data-cy='movie-release' className='movie-release'>{accessDate}</h4>
-                <h4 data-cy='movie-rating' className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
+                <h4 data-cy='movie-rating' className='movie-rating'>{taintedAverage}</h4>
                 <h4 data-cy='tagline' className='tagline'>{`'${taglineConditional}'`}</h4>
                 <h4 data-cy='overview-label' className='overview'>Movie Overview:</h4>
                 <h4 data-cy='overview' className='overview'>{specificMovie.overview}</h4>
