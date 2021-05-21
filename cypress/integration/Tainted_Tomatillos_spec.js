@@ -65,7 +65,7 @@ describe('Show main view of Tainted Tomatillos App', () => {
         delay: 200
       })
       cy.visit('http://localhost:3000')
-        .get('.error-msg').should('contain', 'Something went wrong! Please try again later.')
+        .get('h3').should('contain', 'Something went wrong. Please try again later.')
     });
   });
 
@@ -76,6 +76,6 @@ describe('Show main view of Tainted Tomatillos App', () => {
         delay: 200
       })
       cy.visit('http://localhost:3000')
-        .get('.error-msg').should('contain', 'Uhoh! Something is wrong with our system. Please try back later.')
+        .get('h3').should('contain', 'Uhoh! Something is wrong with our system. Please try back later.')
     });
   });
