@@ -6,7 +6,6 @@ const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
   const taintedAverage = taintedRating.repeat(Math.floor(movie.average_rating))
 
-
   return (
     <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} >
       <div onClick={() => handleClick(movie.id)} className='card'>
