@@ -40,7 +40,11 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
   });
 
   it('Should display a title on the movie details card', () => {
-    cy.get('[data-cy=release-date]').should('contain', '2020');
+    cy.get('[data-cy=movie-release]').should('contain', '2020');
+  });
+
+  it('Should display a title on the movie details card', () => {
+    cy.get('[data-cy=movie-rating]').contains('⭐️');
   });
 
 })
