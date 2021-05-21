@@ -23,7 +23,7 @@ class ShowDetails extends Component {
 
         return (
           <div className='details-card'>
-            <NavLink exact to='/'><button className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button></NavLink>
+            <NavLink exact to='/'><button data-cy='home-button' className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button></NavLink>
             {this.state.error && <h3>{this.state.error}</h3>}
             {!this.state.error &&
               <>
@@ -37,7 +37,7 @@ class ShowDetails extends Component {
                 <h4 data-cy='genre' className='genre'>Genre: {specificMovie.genres}</h4>
                 <h4 data-cy='budget' className='budget'>Budget: ${specificMovie.budget}</h4>
                 <h4 data-cy='revenue' className='revenue'>Revenue: ${specificMovie.revenue}</h4>
-                <h4 className='runtime'>RunTime: {specificMovie.runtime} min</h4>
+                <h4 data-cy='runtime' className='runtime'>RunTime: {specificMovie.runtime} min</h4>
               </>
             }
           </div>
