@@ -7,7 +7,7 @@ const MovieCard = ({ movie, handleClick }) => {
 
 
   return (
-    <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} className='card title movie-rating'>
+    <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} >
       <div onClick={() => handleClick(movie.id)} className='card'>
         <img className='movie-image' src={movie.poster_path} alt='movie poster'/>
         <h2 className='title'>{movie.title}</h2>
