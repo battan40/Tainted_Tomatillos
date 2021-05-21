@@ -16,38 +16,25 @@ class App extends Component {
     }
   }
 
-  handleClick = (id) => {
-    if(!this.state.movieSelected) {
-      this.setState({
-        movieSelected: id
-      })
-    } else {
-      this.setState({
-        movieSelected: false
-      })
-    }
-  }
-
   render() {
     return (
       <>
       <article className='App'>
         <Header />
-        {this.state.error && <h3>{this.state.error}</h3>}
+        {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
                 return <Movies
                   movieData={this.state.movies}
                   movieSelected={this.state.movieSelected}
-                  handleClick={this.handleClick}/>
+              />
               }}
             />
             <Route path="/movieDetails/:id" render={({ match }) => {
               const { id } = match.params;
               return <ShowDetails
                 movie={id}
-                handleClick={this.handleClick}
               />
               }}
             />
@@ -61,13 +48,13 @@ class App extends Component {
   componentDidMount = () => {
     fetchAllMovies()
       .then(movieData => {
-        if(typeof movieData === 'string') {
-          this.setState({ error: movieData })
-        } else {
-          this.setState({ movies: movieData.movies })
-        }
+        (typeof movieData === 'string') ?
+          this.setState({ error:
+            movieData }):
+              this.setState({ movies:
+                movieData.movies })
       })
-      .catch(err => err.message)
+      .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
   }
 }
 

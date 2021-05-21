@@ -14,7 +14,6 @@ class ShowDetails extends Component {
   }
 
   render() {
-    const { handleClick } = this.props;
     const { specificMovie } = this.state;
     const taintedRating = '⭐️';
     const taintedAverage = taintedRating.repeat(Math.floor(specificMovie.average_rating));
@@ -23,7 +22,7 @@ class ShowDetails extends Component {
 
         return (
           <div className='details-card'>
-            <NavLink exact to='/'><button data-cy='home-button' className='home-button' onClick={() => handleClick(false)}>Back to Home Page</button></NavLink>
+            <NavLink to='/'><button data-cy='home-button' className='home-button'>Back to Home Page</button></NavLink>
             {this.state.error && <h3>{this.state.error}</h3>}
             {!this.state.error &&
               <>
