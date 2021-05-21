@@ -4,6 +4,7 @@ import './MovieCard.css';
 
 const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
+  const taintedAverage = taintedRating.repeat(Math.floor(movie.average_rating))
 
 
   return (
@@ -11,7 +12,7 @@ const MovieCard = ({ movie, handleClick }) => {
       <div onClick={() => handleClick(movie.id)} className='card'>
         <img className='movie-image' src={movie.poster_path} alt='movie poster'/>
         <h2 className='title'>{movie.title}</h2>
-        <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(movie.average_rating))}</h4>
+        <h4 className='movie-rating'>{taintedAverage}</h4>
       </div>
     </NavLink>
 
