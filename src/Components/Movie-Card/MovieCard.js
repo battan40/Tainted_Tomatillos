@@ -5,7 +5,6 @@ import './MovieCard.css';
 const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
 
-
   return (
     <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} className='card title movie-rating'>
       <div onClick={() => handleClick(movie.id)} className='card'>
