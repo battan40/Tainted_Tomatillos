@@ -79,5 +79,20 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.get('[data-cy=home-button]').should('contain', 'Back to Home Page');
   });
 
+  it('Should return to home page when back to home button is clicked', () => {
+    cy.get('[data-cy=home-button]').click()
+      .url().should('eq', 'http://localhost:3000/');
+  });
 
-})
+});
+
+describe('400s error handling message on the main page view', () => {
+  it('Displays a different message when a 404 error comes through to the user', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/337401', {
+      statusCode: 404,
+      delay: 200
+    })
+    cy.visit('http://localhost:3000/movieDetails/337401')
+      .get('h3').should('contain', 'Something went wrong! Please try again later.')
+  });
+});
