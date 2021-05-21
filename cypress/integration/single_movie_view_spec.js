@@ -75,5 +75,9 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.get('[data-cy=runtime]').should('contain', '115 min');
   });
 
+  it('Should display a home button on the movie details card', () => {
+    cy.get('[data-cy=home-button]').should('contain', 'Back to Home Page');
+  });
+
 
 })
