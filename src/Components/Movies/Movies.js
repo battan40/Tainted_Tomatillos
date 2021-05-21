@@ -18,9 +18,9 @@ const Movies = ({ movieData, movieSelected, handleClick }) => {
   }
 
   return (
-    <NavLink to={'/'}><div className='movie-container'>
+    <div className='movie-container'>
       {movieDisplay()}
-    </div></NavLink>
+    </div>
   )
 }
 
