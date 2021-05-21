@@ -3,12 +3,12 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <nav className='Header'>
+    <nav className='header'>
       <h1>Tainted Tomatillos</h1>
       <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
-      <button>Search</button>
+      <button className='search-button'>Search</button>
       <input
-        placeholder="Search for a Movie"
+        className='search-input' type='text' placeholder="Search for a Movie"
       />
     </nav>
   )
