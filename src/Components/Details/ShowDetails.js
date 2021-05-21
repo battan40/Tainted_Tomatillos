@@ -35,7 +35,7 @@ class ShowDetails extends Component {
                 <h4 data-cy='overview-label' className='overview'>Movie Overview:</h4>
                 <h4 data-cy='overview' className='overview'>{specificMovie.overview}</h4>
                 <h4 data-cy='genre' className='genre'>Genre: {specificMovie.genres}</h4>
-                <h4 className='budget'>Budget: ${specificMovie.budget}</h4>
+                <h4 data-cy='budget' className='budget'>Budget: ${specificMovie.budget}</h4>
                 <h4 className='revenue'>Revenue: ${specificMovie.revenue}</h4>
                 <h4 className='runtime'>RunTime: {specificMovie.runtime} min</h4>
               </>
