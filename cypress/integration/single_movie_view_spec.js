@@ -51,4 +51,12 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.get('[data-cy=tagline]').should('contain', 'Write in and give us a tagline for this one!');
   });
 
+  it('Should display a overview on the movie details card', () => {
+    cy.get('[data-cy=overview-label]').should('contain', 'Movie Overview:');
+  });
+
+  it('Should display a overview on the movie details card', () => {
+    cy.get('[data-cy=overview]').should('contain', 'When the Emperor of China');
+  });
+
 })
