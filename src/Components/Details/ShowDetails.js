@@ -29,7 +29,7 @@ class ShowDetails extends Component {
               <>
                 <img className='details-image' src={specificMovie.poster_path} alt={`movie poster for ${specificMovie.title}`}/>
                 <h2 data-cy='details-title' className='details-title'>{specificMovie.title}</h2>
-                <h4 className='movie-release'>{accessDate}</h4>
+                <h4 data-cy='release-date' className='movie-release'>{accessDate}</h4>
                 <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(specificMovie.average_rating))}</h4>
                 <h4 className='tagline'>{`'${taglineConditional}'`}</h4>
                 <h4 className='overview'>Movie Overview:</h4>
