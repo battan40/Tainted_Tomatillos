@@ -33,7 +33,7 @@ class App extends Component {
       <>
       <article className='App'>
         <Header />
-        {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
+        {this.state.error && <h3>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
@@ -61,13 +61,13 @@ class App extends Component {
   componentDidMount = () => {
     fetchAllMovies()
       .then(movieData => {
-        (typeof movieData === 'string') ?
-          this.setState({ error:
-            movieData }):
-              this.setState({ movies:
-                movieData.movies })
+        if(typeof movieData === 'string') {
+          this.setState({ error: movieData })
+        } else {
+          this.setState({ movies: movieData.movies })
+        }
       })
-      .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
+      .catch(err => err.message)
   }
 }
 
