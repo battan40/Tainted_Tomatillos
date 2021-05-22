@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-// import SearchBar from '../SearchBar/SearchBar';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
 import { Route, Switch } from 'react-router-dom';
