@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
-import { fetchAllMovies } from '../../Utils/APICalls';
 import { Route, Switch } from 'react-router-dom';
+import { fetchAllMovies } from '../../Utils/APICalls';
+import { cleanAllMoviesData } from '../../Utils/Utils'
+
 import './App.css';
 
 class App extends Component {
@@ -56,16 +58,18 @@ class App extends Component {
     )
   }
 
-  componentDidMount = () => {
-    fetchAllMovies()
+  componentDidMount = async () => {
+    await fetchAllMovies()
       .then(movieData => {
         (typeof movieData === 'string') ?
           this.setState({ error:
             movieData }):
               this.setState({ movies:
-                movieData.movies })
+                cleanAllMoviesData(movieData.movies) })
+
       })
       .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
+      console.log(this.state.movies)
   }
 }
 
