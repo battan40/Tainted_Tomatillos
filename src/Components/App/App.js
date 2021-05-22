@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
-import { fetchAllMovies } from '../../APICalls';
+import { fetchAllMovies } from '../../Utils/APICalls';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -27,7 +27,7 @@ class App extends Component {
       this.state.filteredMovies :
       this.state.movies
   }
-  
+
   render() {
     return (
       <>
