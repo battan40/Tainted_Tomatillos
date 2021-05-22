@@ -14,6 +14,18 @@ class ShowDetails extends Component {
       }
   }
 
+  componentDidMount = () => {
+    fetchSingleMovie(this.state.movieID)
+      .then(singleMovieData => {
+        if(typeof singleMovieData === 'string') {
+          this.setState({ error: singleMovieData })
+        } else {
+          this.setState({ specificMovie: cleanSingleMovieData(singleMovieData.movie) })
+        }
+    })
+      .catch(err => err.message)
+  }
+
   render() {
     const { specificMovie } = this.state;
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
@@ -23,18 +35,6 @@ class ShowDetails extends Component {
         genreBeautify = specificMovie.genres.join(' | ')
     } else {
         genreBeautify = 'This Movie is beyond all Genres'
-    }
-
-    componentDidMount = () => {
-      fetchSingleMovie(this.state.movieID)
-        .then(singleMovieData => {
-          if(typeof singleMovieData === 'string') {
-            this.setState({ error: singleMovieData })
-          } else {
-            this.setState({ specificMovie: cleanSingleMovieData(singleMovieData.movie) })
-          }
-      })
-        .catch(err => err.message)
     }
 
         return (

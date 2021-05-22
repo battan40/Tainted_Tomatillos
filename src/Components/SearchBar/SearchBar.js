@@ -16,7 +16,6 @@ class SearchBar extends Component {
     this.props.moviesForSearchBar(this.state.searchInput)
   }
 
-
   render () {
     return (
       <form>
@@ -32,6 +31,5 @@ class SearchBar extends Component {
     )
   }
 }
-
 
 export default SearchBar;
