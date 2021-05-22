@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
   return (
     <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} >
       <div className='card'>
-        <img className='movie-image' src={movie.poster_path} alt='movie poster'/>
+        <img className='movie-image' src={movie.poster_path} alt={`${movie.title} poster`}/>
         <h2 className='title'>{movie.title}</h2>
         <h4 className='movie-rating'>{taintedAverage}</h4>
       </div>
