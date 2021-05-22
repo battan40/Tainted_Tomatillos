@@ -13,3 +13,9 @@ export const cleanAllMoviesData = (allMovies) => {
     }
   })
 }
+
+export const cleanSingleMovieData = (singleMovieData) => {
+  if(singleMovieData.backdrop_path.includes('NoPhotoAvailable'))
+    singleMovieData.backdrop_path = ''
+    return singleMovieData
+}
