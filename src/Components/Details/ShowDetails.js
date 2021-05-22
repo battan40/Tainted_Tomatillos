@@ -18,6 +18,12 @@ class ShowDetails extends Component {
     const { specificMovie } = this.state;
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
+    let genreBeautify;
+      if (specificMovie.genres && specificMovie.genres.length > 1) {
+        genreBeautify = specificMovie.genres.join(' | ')
+    } else {
+        genreBeautify = 'This Movie is beyond all Genres'
+    }
 
         return (
       <article className='details-display' style={{backgroundImage: `url(${specificMovie.backdrop_path})`}}>
@@ -33,7 +39,7 @@ class ShowDetails extends Component {
                 <h4 data-cy='tagline' className='tagline'>{`'${taglineConditional}'`}</h4>
                 <h4 data-cy='overview-label' className='overview'>Movie Overview:</h4>
                 <h4 data-cy='overview' className='overview'>{specificMovie.overview}</h4>
-                <h4 data-cy='genre' className='genre'>Genre: {specificMovie.genres}</h4>
+                <h4 data-cy='genre' className='genre'>Genre: {genreBeautify}</h4>
                 <h4 data-cy='budget' className='budget'>Budget: ${specificMovie.budget}</h4>
                 <h4 data-cy='revenue' className='revenue'>Revenue: ${specificMovie.revenue}</h4>
                 <h4 data-cy='runtime' className='runtime'>RunTime: {specificMovie.runtime} min</h4>
