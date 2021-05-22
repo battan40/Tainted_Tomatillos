@@ -22,6 +22,12 @@ class App extends Component {
     this.setState({filteredMovies: moviesToList})
   }
 
+  displayMovies = () => {
+    return this.state.filteredMovies.length > 0 ?
+      this.state.filteredMovies :
+      this.state.movies
+  }
+  
   render() {
     return (
       <>
