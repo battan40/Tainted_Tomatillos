@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchSingleMovie } from '../../Utils/APICalls';
-import { taintedAverage } from '../../Utils/Utils';
+import { taintedAverage, cleanSingleMovieData } from '../../Utils/Utils';
 import './ShowDetails.css';
 
 class ShowDetails extends Component {
@@ -51,7 +51,7 @@ class ShowDetails extends Component {
         if(typeof singleMovieData === 'string') {
           this.setState({ error: singleMovieData })
         } else {
-          this.setState({ specificMovie: singleMovieData.movie })
+          this.setState({ specificMovie: cleanSingleMovieData(singleMovieData.movie) })
         }
     })
       .catch(err => err.message)
