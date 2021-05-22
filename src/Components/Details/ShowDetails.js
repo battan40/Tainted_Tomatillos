@@ -25,6 +25,18 @@ class ShowDetails extends Component {
         genreBeautify = 'This Movie is beyond all Genres'
     }
 
+    componentDidMount = () => {
+      fetchSingleMovie(this.state.movieID)
+        .then(singleMovieData => {
+          if(typeof singleMovieData === 'string') {
+            this.setState({ error: singleMovieData })
+          } else {
+            this.setState({ specificMovie: cleanSingleMovieData(singleMovieData.movie) })
+          }
+      })
+        .catch(err => err.message)
+    }
+
         return (
       <article className='details-display' style={{backgroundImage: `url(${specificMovie.backdrop_path})`}}>
           <div className='details-card'>
@@ -51,17 +63,6 @@ class ShowDetails extends Component {
         )
   }
 
-  componentDidMount = () => {
-    fetchSingleMovie(this.state.movieID)
-      .then(singleMovieData => {
-        if(typeof singleMovieData === 'string') {
-          this.setState({ error: singleMovieData })
-        } else {
-          this.setState({ specificMovie: cleanSingleMovieData(singleMovieData.movie) })
-        }
-    })
-      .catch(err => err.message)
-  }
 }
 
 export default ShowDetails;

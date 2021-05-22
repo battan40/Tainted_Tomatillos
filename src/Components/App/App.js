@@ -30,6 +30,19 @@ class App extends Component {
       this.state.movies
   }
 
+  componentDidMount = () => {
+    fetchAllMovies()
+      .then(movieData => {
+        (typeof movieData === 'string') ?
+          this.setState({ error:
+            movieData }):
+              this.setState({ movies:
+                cleanAllMoviesData(movieData.movies) })
+
+      })
+      .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
+  }
+
   render() {
     return (
       <>
@@ -56,19 +69,6 @@ class App extends Component {
       </article>
       </>
     )
-  }
-
-  componentDidMount = () => {
-    fetchAllMovies()
-      .then(movieData => {
-        (typeof movieData === 'string') ?
-          this.setState({ error:
-            movieData }):
-              this.setState({ movies:
-                cleanAllMoviesData(movieData.movies) })
-
-      })
-      .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
   }
 
 }
