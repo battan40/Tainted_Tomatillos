@@ -5,7 +5,6 @@ import './MovieCard.css';
 const MovieCard = ({ movie, handleClick }) => {
   const taintedRating = '⭐️'
 
-
   return (
     <NavLink id={movie.id} to={`/movieDetails/${movie.id}`} className='card title movie-rating'>
       <div onClick={() => handleClick(movie.id)} className='card'>
@@ -14,7 +13,6 @@ const MovieCard = ({ movie, handleClick }) => {
         <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(movie.average_rating))}</h4>
       </div>
     </NavLink>
-
   )
 }
 
