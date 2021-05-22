@@ -13,7 +13,6 @@ const MovieCard = ({ movie }) => {
         <h4 className='movie-rating'>{taintedAverage(movie.average_rating)}</h4>
       </div>
     </NavLink>
-
   )
 }
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import MovieCard from '../Movie-Card/MovieCard';
+import SearchBar from '../SearchBar/SearchBar';
 import './Movies.css';
 
 const Movies = ({ movieData }) => {
   const movieDisplay = () => {
+     if (!matchingMovies) {
       return movieData.map(movie => {
         return (
           <MovieCard
@@ -12,6 +14,17 @@ const Movies = ({ movieData }) => {
           />
         )
       })
+    } else {
+      return matchingMovies.map(movie => {
+        return (
+          <MovieCard
+          key={movie.id}
+          movie={movie}
+          handleClick={this.handleClick}
+          />
+        )
+      })
+    }
   }
 
   return (
