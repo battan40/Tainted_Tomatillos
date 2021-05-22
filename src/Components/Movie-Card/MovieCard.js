@@ -13,7 +13,6 @@ const MovieCard = ({ movie, handleClick }) => {
         <h4 className='movie-rating'>{taintedRating.repeat(Math.floor(movie.average_rating))}</h4>
       </div>
     </NavLink>
-
   )
 }
 
