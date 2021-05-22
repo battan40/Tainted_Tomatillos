@@ -60,7 +60,7 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
   });
 
   it('Should display a genre on the movie details card', () => {
-    cy.get('[data-cy=genre]').should('contain', 'ActionAdventureDramaFantasy');
+    cy.get('[data-cy=genre]').should('contain', 'Action | Adventure | Drama | Fantasy');
   });
 
   it('Should display a budget on the movie details card', () => {
@@ -93,7 +93,7 @@ describe('400 error handling message on the main page view', () => {
       delay: 200
     })
     cy.visit('http://localhost:3000/movieDetails/337401')
-      .get('h3').should('contain', 'Something went wrong! Please try again later.')
+      .get('h3').should('contain', 'Something went wrong. Please try again later.')
   });
 });
 
