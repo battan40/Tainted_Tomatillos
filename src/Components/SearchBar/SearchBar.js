@@ -5,15 +5,12 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        movies: movieData,
-        matchingMovies: null,
         searchInput: '',
         error: ''
       }
   }
 
   handleChange = (event) => {
-    event.preventDefault();
     let searchValue = (event.target.value).toUpperCase();
     this.setState({ searchInput: searchValue })
     this.props.moviesForSearchBar(this.state.searchInput)
