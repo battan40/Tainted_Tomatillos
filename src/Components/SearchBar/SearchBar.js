@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import MovieCard from '../Movie-Card/MovieCard';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
       this.state = {
         searchInput: '',
         error: ''
@@ -14,6 +13,7 @@ class SearchBar extends Component {
   handleChange = (event) => {
     let searchValue = event.target.value;
     this.setState({ searchInput: searchValue })
+    this.props.moviesForSearchBar(this.state.searchInput)
   }
 
   render () {
