@@ -60,7 +60,7 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
   });
 
   it('Should display a genre on the movie details card', () => {
-    cy.get('[data-cy=genre]').should('contain', 'ActionAdventureDramaFantasy');
+    cy.get('[data-cy=genre]').should('contain', 'Action | Adventure | Drama | Fantasy');
   });
 
   it('Should display a budget on the movie details card', () => {
