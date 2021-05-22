@@ -21,6 +21,7 @@ class ShowDetails extends Component {
     const taglineConditional = specificMovie.tagline ? specificMovie.tagline : 'Write in and give us a tagline for this one!';
 
         return (
+      <article className='details-display' style={{backgroundImage: `url(${specificMovie.backdrop_path})`}}>
           <div className='details-card'>
             <NavLink to='/'><button data-cy='home-button' className='home-button'>Back to Home Page</button></NavLink>
             {this.state.error && <h3>{this.state.error}</h3>}
@@ -40,6 +41,8 @@ class ShowDetails extends Component {
               </>
             }
           </div>
+
+      </article>
         )
   }
 

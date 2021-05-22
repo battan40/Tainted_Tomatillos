@@ -11,7 +11,6 @@ class App extends Component {
     super()
       this.state = {
         movies: [],
-        movieSelected: false,
         error: ''
     }
   }
@@ -27,7 +26,6 @@ class App extends Component {
             <Route exact path="/" render={() => {
                 return <Movies
                   movieData={this.state.movies}
-                  movieSelected={this.state.movieSelected}
               />
               }}
             />
