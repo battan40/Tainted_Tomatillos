@@ -11,21 +11,23 @@ class App extends Component {
     super()
       this.state = {
         movies: [],
+        filteredMovies: [],
         error: ''
     }
   }
+
 
   render() {
     return (
       <>
       <article className='App'>
-        <Header />
+        <Header moviesForSearchBar={this.moviesForSearchBar}/>
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
                 return <Movies
-                  movieData={this.state.movies}
+                  movieData={this.displayMovies()}
               />
               }}
             />
