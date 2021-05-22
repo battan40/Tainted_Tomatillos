@@ -16,6 +16,11 @@ class App extends Component {
     }
   }
 
+  moviesForSearchBar = (searchWord) => {
+    const moviesToList =  this.state.movies.filter(movie =>
+    movie.title.toLowerCase().includes(searchWord.toLowerCase()))
+    this.setState({filteredMovies: moviesToList})
+  }
 
   render() {
     return (
