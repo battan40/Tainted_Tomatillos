@@ -23,3 +23,14 @@
 .search-input {
   width: 15rem;
 }
+
+.search-button:before {
+
+
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+
+
+}
