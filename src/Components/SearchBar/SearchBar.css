@@ -48,3 +48,7 @@
 .search-button:active:after {
   background: transparent;
 }
+
+.search-button:hover:before {
+  opacity: 1;
+}
