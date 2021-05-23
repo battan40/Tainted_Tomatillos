@@ -40,3 +40,7 @@
   transition: opacity .3s ease-in-out;
   border-radius: 10px;
 }
+
+.search-button:active {
+  color: #890A1A;
+}
