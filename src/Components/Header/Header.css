@@ -1,12 +1,12 @@
 .header {
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
 .small-title {
-  font-size: .9em;
+  font-size: 1.3rem;
 }
 
 .large-title {
