@@ -52,3 +52,11 @@
 .search-button:hover:before {
   opacity: 1;
 }
+
+.search-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+
+
+}
