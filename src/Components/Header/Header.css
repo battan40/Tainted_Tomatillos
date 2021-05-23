@@ -4,3 +4,7 @@
   flex-direction: column;
   text-align: left;
 }
+
+.small-title {
+  font-size: .9em;
+}
