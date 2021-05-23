@@ -44,3 +44,7 @@
 .search-button:active {
   color: #890A1A;
 }
+
+.search-button:active:after {
+  background: transparent;
+}
