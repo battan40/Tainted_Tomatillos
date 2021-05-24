@@ -15,6 +15,7 @@ class App extends Component {
       this.state = {
         movies: [],
         filteredMovies: [],
+        searched: false,
         error: ''
     }
   }
@@ -23,6 +24,7 @@ class App extends Component {
     const moviesToList =  this.state.movies.filter(movie =>
     movie.title.toLowerCase().includes(searchValue.toLowerCase()))
     this.setState({filteredMovies: moviesToList})
+    this.setState({searched: true})
   }
 
   displayMovies = () => {
@@ -35,10 +37,8 @@ class App extends Component {
     fetchAllMovies()
       .then(movieData => {
         (typeof movieData === 'string') ?
-          this.setState({ error:
-            movieData }):
-              this.setState({ movies:
-                cleanAllMoviesData(movieData.movies) })
+          this.setState({ error: movieData }):
+          this.setState({ movies: cleanAllMoviesData(movieData.movies) })
 
       })
       .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
@@ -49,16 +49,17 @@ class App extends Component {
       <>
       <article className='App'>
         <Header/>
-        <SearchBar moviesForSearchBar={this.moviesForSearchBar} />
-        {!this.props.filteredMovies.length &&
-
-        }
+        <SearchBar
+          moviesForSearchBar={this.moviesForSearchBar}
+          filteredMovies={this.filteredMovies}
+        />
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
                 return <Movies
                   movieData={this.displayMovies()}
+                  searched={this.state.searched}
               />
             }}
             />
