@@ -51,15 +51,18 @@ class App extends Component {
         <Header/>
         <SearchBar
           moviesForSearchBar={this.moviesForSearchBar}
-          filteredMovies={this.filteredMovies}
+          filteredMovies={this.state.filteredMovies}
+          searched={this.state.searched}
         />
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
+        {this.state.searched && !this.state.filteredMovies.length &&
+          <h3>{'Sorry! No movies were found... Try again!'}</h3>
+        }
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
                 return <Movies
                   movieData={this.displayMovies()}
-                  searched={this.state.searched}
               />
             }}
             />
