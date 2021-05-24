@@ -7,7 +7,6 @@ const Header = () => {
     <nav className='header'>
       <h1 className='large-title'>Tainted Tomatillos</h1>
       <h2 className='small-title'>Where The Ratings Are Honestly Rotten</h2>
-
     </nav>
   )
 }
