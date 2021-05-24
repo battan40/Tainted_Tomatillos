@@ -12,6 +12,9 @@ describe('The search bar functionality', () => {
     cy.visit('http://localhost:3000/')
   });
 
+  it('Should display the search bar on the main page', () => {
+    cy.get('form').find('input').should('be.visible')
+  });
 
 
 })
