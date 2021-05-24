@@ -16,5 +16,8 @@ describe('The search bar functionality', () => {
     cy.get('form').find('input').should('be.visible')
   });
 
+  it('Should be able to type text in search bar', () => {
+    cy.get('form').find('input').type('Mulan')
+  });
 
 })
