@@ -47,7 +47,11 @@ class App extends Component {
     return (
       <>
       <article className='App'>
-        <Header moviesForSearchBar={this.moviesForSearchBar}/>
+        <Header/>
+        <SearchBar moviesForSearchBar={this.moviesForSearchBar} />
+        {!this.props.filteredMovies.length &&
+
+        }
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>

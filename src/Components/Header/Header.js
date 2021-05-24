@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import './Header.css';
 
-const Header = ({ moviesForSearchBar }) => {
+const Header = ({ moviesForSearchBar, filteredMovies }) => {
   return (
     <nav className='header'>
       <h1 className='large-title'>Tainted Tomatillos</h1>
