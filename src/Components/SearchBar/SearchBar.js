@@ -17,6 +17,11 @@ class SearchBar extends Component {
   }
 
 
+  searchInput = (event) => {
+    event.preventDefault();
+    this.props.moviesForSearchBar(this.state.searchInput)
+    this.setState({ clicked: true })
+  }
 
   render () {
     return (
