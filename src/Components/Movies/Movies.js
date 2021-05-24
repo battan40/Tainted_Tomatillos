@@ -2,7 +2,7 @@ import React from 'react';
 import MovieCard from '../Movie-Card/MovieCard';
 import './Movies.css';
 
-const Movies = ({ movieData, searched }) => {
+const Movies = ({ movieData }) => {
   const movieDisplay = () => {
     return movieData.map(movie => {
       return (
@@ -16,12 +16,7 @@ const Movies = ({ movieData, searched }) => {
 
   return (
     <div className='movie-container'>
-    {!searched &&
-      {this.movieDisplay()}
-    }
-    {searched && movieData.length &&
-      <h3>{'Sorry! No movies were found!'}</h3>
-    }
+      {movieDisplay()}
     </div>
   )
 }
