@@ -16,11 +16,15 @@ class SearchBar extends Component {
     this.props.moviesForSearchBar(this.state.searchInput)
   }
 
+  clearInput = () => {
+    this.setState({searchInput: ''})
+  }
 
   searchInput = (event) => {
     event.preventDefault();
     this.props.moviesForSearchBar(this.state.searchInput)
     this.setState({ clicked: true })
+    this.clearInput();
   }
 
   render () {
