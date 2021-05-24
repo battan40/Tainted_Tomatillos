@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ moviesForSearchBar, filteredMovies, searched }) {
+    super();
       this.state = {
         searchInput: '',
+        clicked: false,
       }
   }
 
@@ -14,6 +15,8 @@ class SearchBar extends Component {
     this.setState({ searchInput: searchValue })
     this.props.moviesForSearchBar(this.state.searchInput)
   }
+
+
 
   render () {
     return (
@@ -28,7 +31,7 @@ class SearchBar extends Component {
         <button
           type='button'
           className='search-button'
-          onChange={(event) => this.handleChange(event)}>Search</button>
+          onClick={(event) => this.searchInput(event)}>Search</button>
       </form>
     )
   }
