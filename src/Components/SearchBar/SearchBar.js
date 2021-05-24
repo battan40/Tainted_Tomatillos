@@ -6,7 +6,6 @@ class SearchBar extends Component {
     super(props);
       this.state = {
         searchInput: '',
-        error: ''
       }
   }
 
@@ -26,7 +25,10 @@ class SearchBar extends Component {
           value={this.state.searchInput}
           onChange={(event) => this.handleChange(event)}
         />
-        <button type='button' className='search-button'>Search</button>
+        <button
+          type='button'
+          className='search-button'
+          onChange={(event) => this.handleChange(event)}>Search</button>
       </form>
     )
   }
