@@ -1,1 +1,18 @@
+.header {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  -webkit-box-shadow: 8px 11px 20px 5px #890A1A;
+  box-shadow: 8px 11px 20px 5px #890A1A;
+}
 
+.small-title {
+  font-size: 1.3rem;
+  color: #deb6b8
+}
+
+.large-title {
+  font-size: 2.8em;
+  font-weight: bold;
+}
