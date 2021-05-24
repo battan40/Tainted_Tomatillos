@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import SearchBar from '../SearchBar/SearchBar';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
 import { Route, Switch } from 'react-router-dom';
@@ -47,7 +48,8 @@ class App extends Component {
     return (
       <>
       <article className='App'>
-        <Header moviesForSearchBar={this.moviesForSearchBar}/>
+        <Header />
+        <SearchBar moviesForSearchBar={this.moviesForSearchBar}/>
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {!this.state.error &&
           <Switch>
