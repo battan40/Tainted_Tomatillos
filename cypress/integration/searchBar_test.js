@@ -20,4 +20,9 @@ describe('The search bar functionality', () => {
     cy.get('form').find('input').type('Mulan')
   });
 
+  it('Should not display any movies if no matching input is found', () => {
+    cy.get('form').find('input').type('THE GRINCH')
+      .get('article').find('.card').should('have.length', 0)
+  });
+
 })
