@@ -11,7 +11,7 @@
 
 Do you need to know every detail about every movie that you want to see before you see it? Tainted Tomatillos is the app for you!
 
-This was a paired project, where we were given two weeks to complete a movie database application using Asynchronous JavaScript, React, Router, Conditional Rendering, and Cypress acceptance testing. The Rubric & Spec for this project can be found [here] (https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
+This was a paired project, where we were given two weeks to complete a movie database application using Asynchronous JavaScript, React, Router, Conditional Rendering, and Cypress acceptance testing. The Rubric & Spec for this project can be found [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
 ![Final_Main](https://user-images.githubusercontent.com/76409536/119431863-8ffeec00-bcd0-11eb-8d43-87b6699e127c.gif)
 
