@@ -9,10 +9,11 @@
 
 ## Description
 
+Do you need to know every detail about a movie that
 
 
 ### Notable Features
-*
+* 
 
 *
 
@@ -56,6 +57,11 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Walkthrough
 
+1. Once you access the app, a user is immediately brought to the main landing page where all of the movie cards (each with their respective movie poster, title, and rating) will populate under a header and search bar.
+
+2. To find a specific movie, a user can type into a search bar, where movies will instantly populate below if they match the criteria.
+
+3. To see a specific movie's details, a user can click any movie card, which will bring them to that movie's details page. The movie details page includes: the movie poster, title, release date, rating, tagline, overview, genre(s), budget, revenue, and runtime.
 
 
 ## Authors
