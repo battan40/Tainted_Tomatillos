@@ -47,8 +47,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Cypress Testing
 
+1. Once your app is set up locally, install cypress by running `npm install cypress --save-dev`
 
+2. To open and run the Cypress tests, run `npx cypress open`
 
 
 ## Walkthrough
