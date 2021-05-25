@@ -9,7 +9,9 @@
 
 ## Description
 
-Do you need to know every detail about a movie that
+Do you need to know every detail about every movie that you want to see before you see it? Tainted Tomatillos is the app for you!
+
+
 
 
 ### Notable Features
@@ -66,6 +68,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 2. To find a specific movie, a user can type into a search bar, where movies will instantly populate below if they match the criteria.
 
 3. To see a specific movie's details, a user can click any movie card, which will bring them to that movie's details page. The movie details page includes: the movie poster, title, release date, rating, tagline, overview, genre(s), budget, revenue, and runtime.
+
+
 
 
 ## Authors
