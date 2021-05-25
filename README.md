@@ -15,7 +15,7 @@ Do you need to know every detail about a movie that
 ### Notable Features
 * Instant Search that populates any movie that matches a user's input
 
-*
+* Separate movie details display for every movie with data from an API
 
 *
 
