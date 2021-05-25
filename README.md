@@ -70,7 +70,11 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 3. To see a specific movie's details, a user can click any movie card, which will bring them to that movie's details page. The movie details page includes: the movie poster, title, release date, rating, tagline, overview, genre(s), budget, revenue, and runtime.
 
 
+## Learning Goals
 
+* Gain competency with React fundamentals
+* Learn how to test React Components & Asynchronous Javascript using Cypress
+* Create a multi-page UX using Router
 
 ## Authors
 <table>
