@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ moviesForSearchBar, filteredMovies, searched }) {
+    super();
       this.state = {
         searchInput: '',
-        error: ''
+        clicked: false,
       }
   }
 
@@ -14,6 +14,17 @@ class SearchBar extends Component {
     let searchValue = (event.target.value).toUpperCase();
     this.setState({ searchInput: searchValue })
     this.props.moviesForSearchBar(this.state.searchInput)
+  }
+
+  clearInput = () => {
+    this.setState({searchInput: ''})
+  }
+
+  searchInput = (event) => {
+    event.preventDefault();
+    this.props.moviesForSearchBar(this.state.searchInput)
+    this.setState({ clicked: true })
+    this.clearInput();
   }
 
   render () {
@@ -26,7 +37,10 @@ class SearchBar extends Component {
           value={this.state.searchInput}
           onChange={(event) => this.handleChange(event)}
         />
-        <button type='button' className='search-button'>Search</button>
+        <button
+          type='button'
+          className='search-button'
+          onClick={(event) => this.searchInput(event)}>Search</button>
       </form>
     )
   }

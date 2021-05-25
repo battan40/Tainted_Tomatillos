@@ -10,7 +10,7 @@ const MovieCard = ({ movie }) => {
       <div className='card'>
         <img className='movie-image' src={movie.poster_path} alt={`${movie.title} poster`}/>
         <h2 className='title'>{movie.title}</h2>
-        <h4 className='movie-rating'>{taintedAverage(movie.average_rating)}</h4>
+        <h3 className='movie-rating'>{taintedAverage(movie.average_rating)}</h3>
       </div>
     </NavLink>
   )
