@@ -16,11 +16,15 @@ describe('Show single movie view of Tainted Tomatillos App', () => {
     cy.url().should('eq', 'http://localhost:3000/movieDetails/337401')
   });
 
-  it('Should display the title, subtitle, button, and input of the page upon loading', () => {
+  it('Should display the title, subtitle of the single movie display page upon loading', () => {
     cy.contains('nav>h1', 'Tainted Tomatillos')
       .get('nav .small-title').should('contain', 'Where The Ratings Are Honestly Rotten')
-      .get('nav').find('button').should('be.visible')
-      .get('nav input[type=text]').should('be.visible')
+  });
+
+  it('Should display the search bar button, and input on the single movie display page', () => {
+    cy.get('form').find('input').should('be.visible')
+      .get('form input[type=text]').should('be.visible')
+      .get('form').find('button').should('be.visible')
   });
 
   it('Should only display one movies on the details page', () => {

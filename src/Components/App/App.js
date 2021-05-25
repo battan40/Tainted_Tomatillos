@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import SearchBar from '../SearchBar/SearchBar';
 import Movies from '../Movies/Movies';
 import ShowDetails from '../Details/ShowDetails';
 import { Route, Switch } from 'react-router-dom';
@@ -14,6 +15,7 @@ class App extends Component {
       this.state = {
         movies: [],
         filteredMovies: [],
+        searched: false,
         error: ''
     }
   }
@@ -22,6 +24,7 @@ class App extends Component {
     const moviesToList =  this.state.movies.filter(movie =>
     movie.title.toLowerCase().includes(searchValue.toLowerCase()))
     this.setState({filteredMovies: moviesToList})
+    this.setState({searched: true})
   }
 
   displayMovies = () => {
@@ -34,10 +37,8 @@ class App extends Component {
     fetchAllMovies()
       .then(movieData => {
         (typeof movieData === 'string') ?
-          this.setState({ error:
-            movieData }):
-              this.setState({ movies:
-                cleanAllMoviesData(movieData.movies) })
+          this.setState({ error: movieData }):
+          this.setState({ movies: cleanAllMoviesData(movieData.movies) })
 
       })
       .catch(err => this.setState({ error: 'Something went wrong. Please try again later.'} ))
@@ -47,8 +48,16 @@ class App extends Component {
     return (
       <>
       <article className='App'>
-        <Header moviesForSearchBar={this.moviesForSearchBar}/>
+        <Header/>
+        <SearchBar
+          moviesForSearchBar={this.moviesForSearchBar}
+          filteredMovies={this.state.filteredMovies}
+          searched={this.state.searched}
+        />
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
+        {this.state.searched && !this.state.filteredMovies.length &&
+          <h4 className='error-handle'>{'We will find the best movie for you yet!'}</h4>
+        }
         {!this.state.error &&
           <Switch>
             <Route exact path="/" render={() => {
