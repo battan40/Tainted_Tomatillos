@@ -76,6 +76,15 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 * Learn how to test React Components & Asynchronous Javascript using Cypress
 * Create a multi-page UX using Router
 
+#### Angie's Learning Goals && Reflection
+* Wants to feel at home with React and its clean modularity when she is finished with this project
+
+* It was amazing to watch the layers of possibility unfold for us as we grew to understand the way the files communicated through each other. I see a lot of possibility in the future for this application
+
+
+#### Ellie's Learning Goals && Reflection
+
+
 ## Authors
 <table>
     <tr>
