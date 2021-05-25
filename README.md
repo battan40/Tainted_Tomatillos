@@ -43,8 +43,10 @@
         <td>Testing</td>
     </tr>
     </tr>
-        <td><img src="./assets/readme/js-icon.png" alt="javascript" width="100" height="auto" /></td>
-        <td><img src="./assets/readme/html-logo.png" alt="html" width="100" height="auto" /></td>
-        <td><img src="./assets/readme/css-logo.png" alt="css" width="100" height="auto" /></td>
+        <td><img src="./assets/js-icon.png" alt="javascript" width="100" height="auto" /></td>
+        <td><img src="./assets/reactjs-icon.jpeg" alt="react" width="100" height="auto" /></td>
+        <td><img src="./assets/html-logo.png" alt="html" width="100" height="auto" /></td>
+        <td><img src="./assets/css-logo.png" alt="css" width="100" height="auto" /></td>
+        <td><img src="./assets/cypress-logo.jpeg" alt="cypress" width="100" height="auto" /></td>
     </tr>
 </table>
