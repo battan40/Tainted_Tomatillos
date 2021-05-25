@@ -21,6 +21,8 @@ Do you need to know every detail about a movie that
 
 * Responsive and Responsible - Can be used on a wide variety of screen sizes and is fully accessible, with a 100% Lighthouse audit score
 
+<p><img src="./assets/lighthouse-audit.png" alt="Lighthouse Audit" height="400px" height="auto" style="border-radius:5px"/><br></p>
+
 
 ## Installation
 
