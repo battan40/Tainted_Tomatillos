@@ -37,7 +37,7 @@ This was a paired project, where we were given two weeks to complete a movie dat
 3. Run `npm install`
 4. Run `npm start`
 
-### #Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
