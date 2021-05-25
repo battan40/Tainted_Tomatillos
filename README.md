@@ -17,7 +17,7 @@ Do you need to know every detail about a movie that
 
 * Separate movie details display for every movie with data from an API
 
-*
+* Cypress testing to test all user flows, including both happy and sad paths
 
 
 ## Installation
