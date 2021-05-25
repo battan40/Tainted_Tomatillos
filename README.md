@@ -11,7 +11,8 @@
 
 Do you need to know every detail about every movie that you want to see before you see it? Tainted Tomatillos is the app for you!
 
-
+This was a paired project
+The Rubric & Spec can be found [here] (https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
 
 ### Notable Features
@@ -76,6 +77,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 * Learn how to test React Components & Asynchronous Javascript using Cypress
 * Create a multi-page UX using Router
 
+
 #### Angie's Learning Goals && Reflection
 * Wants to feel at home with React and its clean modularity when she is finished with this project
 
@@ -83,6 +85,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 #### Ellie's Learning Goals && Reflection
+* Becoming more comfortable with React and modular file structures; Continuing to practice writing clean and DRY code; Implementing Cypress Testing
+
+* This project was a very interesting process of continued refactoring as we were slowly introduced to React, Conditional Rendering Router, and Cypress acceptance testing. As a team, we had regular check-ins to ensure we were meeting our project and personal goals, which was really helpful for our time management and balanced distribution of tasks. Overall, I think this project was successful and I plan to continue to add features and refactor in the future.
 
 
 ## Authors
