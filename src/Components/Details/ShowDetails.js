@@ -10,7 +10,7 @@ class ShowDetails extends Component {
       this.state = {
         movieID: props.movie,
         specificMovie: {},
-        error: ''
+        error: false
       }
   }
 
@@ -25,6 +25,16 @@ class ShowDetails extends Component {
     })
       .catch(err => err.message)
   }
+
+  componentDidUpdate = () => {
+      if (this.state.error === true) {
+        setTimeout(() => this.setState({ position: 1 }),
+      3000
+      );
+    }
+  }
+
+
 
   render() {
     const { specificMovie } = this.state;
