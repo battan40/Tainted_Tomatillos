@@ -33,7 +33,7 @@ describe('Show main view of Tainted Tomatillos App', () => {
 
   it('Should sadly offer some error handling for UX if no movies fit search criteria', () => {
     cy.get('form').find('input').type('THE GRINCH').should('have.length', 1)
-      .get('article').find('h4').should('contain', 'Sorry!')
+      .get('article').find('h4').should('contain', 'We')
   });
 
   it('Should display all movies on the main page', () => {
