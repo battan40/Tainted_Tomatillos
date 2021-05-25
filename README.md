@@ -19,6 +19,8 @@ Do you need to know every detail about a movie that
 
 * Cypress testing to test all user flows, including both happy and sad paths
 
+* Responsive and Responsible - Can be used on a wide variety of screen sizes and is fully accessible, with a 100% Lighthouse audit score
+
 
 ## Installation
 
