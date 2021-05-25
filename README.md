@@ -12,12 +12,18 @@
 
 
 ### Notable Features
+*
 
+*
+
+*
 
 
 ## Installation
 
-
+1. Clone this repo via `git clone git@github.com:battan40/Tainted_Tomatillos.git`
+2. Access cloned directory
+3. Run `npm install`
 
 ### Getting Started with Create React App
 
@@ -40,6 +46,9 @@ You will also see any lint errors in the console.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
 
 
 ## Walkthrough
