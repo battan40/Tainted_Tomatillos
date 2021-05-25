@@ -26,16 +26,6 @@ class ShowDetails extends Component {
       .catch(err => err.message)
   }
 
-  componentDidUpdate = () => {
-      if (this.state.error === true) {
-        setTimeout(() => this.setState({ position: 1 }),
-      3000
-      );
-    }
-  }
-
-
-
   render() {
     const { specificMovie } = this.state;
     const accessDate = specificMovie.release_date ? specificMovie.release_date.split('-')[0] : '';
