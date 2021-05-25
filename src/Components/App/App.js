@@ -56,7 +56,7 @@ class App extends Component {
         />
         {this.state.error && <h3 className='error-msg'>{this.state.error}</h3>}
         {this.state.searched && !this.state.filteredMovies.length &&
-          <h3>{'Sorry! No movies were found... Try again!'}</h3>
+          <h4 className='error-handle'>{'We will find the best movie for you yet!'}</h4>
         }
         {!this.state.error &&
           <Switch>
