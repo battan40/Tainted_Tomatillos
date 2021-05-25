@@ -16,11 +16,24 @@ describe('Show main view of Tainted Tomatillos App', () => {
     cy.url().should('eq', 'http://localhost:3000/')
   });
 
-  it('Should display the title, subtitle, button, and input of the page upon loading', () => {
+  it('Should display the title, and subtitle of the page upon loading', () => {
     cy.contains('nav>h1', 'Tainted Tomatillos')
       .get('nav .small-title').should('contain', 'Where')
-      .get('nav').find('button').should('be.visible')
-      .get('nav input[type=text]').should('be.visible')
+  });
+
+  it('Should display the search bar button, and input on the main page', () => {
+    cy.get('form').find('input').should('be.visible')
+      .get('form input[type=text]').should('be.visible')
+      .get('form').find('button').should('be.visible')
+  });
+
+  it('Should be able to type text in search bar', () => {
+    cy.get('form').find('input').type('Mulan')
+  });
+
+  it('Should sadly offer some error handling for UX if no movies fit search criteria', () => {
+    cy.get('form').find('input').type('THE GRINCH').should('have.length', 1)
+      .get('article').find('h4').should('contain', 'Sorry!')
   });
 
   it('Should display all movies on the main page', () => {
@@ -56,7 +69,6 @@ describe('Show main view of Tainted Tomatillos App', () => {
     })
 
   });
-
 
   describe('400s error handling message on the main page view', () => {
     it('Displays a different message when a 404 error comes through to the user', () => {
