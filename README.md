@@ -37,8 +37,10 @@
 <table>
     <tr>
         <td>Functionality</td>
+        <td>Framework</td>
         <td>Structure</td>
         <td>Styling</td>
+        <td>Testing</td>
     </tr>
     </tr>
         <td><img src="./assets/readme/js-icon.png" alt="javascript" width="100" height="auto" /></td>
